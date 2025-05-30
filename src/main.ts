@@ -1,10 +1,9 @@
-import { requestBodyTrimMiddleware } from '@/src/common/middewares/request-body-trim.middleware';
-
 global.appRoot = path.resolve(__dirname);
 
 import path from 'node:path';
 import { setupSwagger } from '@/src/common/lib/swagger';
 import { exceptionsMiddleware } from '@/src/common/middewares/exceptions.middleware';
+import { requestBodyTrimMiddleware } from '@/src/common/middewares/request-body-trim.middleware';
 import { unknownRoutesMiddleware } from '@/src/common/middewares/unknown-routes.middleware';
 import { globalThrottler } from '@/src/common/throttlers/global.throttler';
 import { apiRouter } from '@/src/routes';
